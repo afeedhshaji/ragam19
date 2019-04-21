@@ -1,0 +1,136 @@
+.container {
+  padding: 15px;
+}
+.clearfloat {
+  content: '';
+  display: block;
+  clear: both;
+}
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.cards li {
+  display: inline-block;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  font-size: 0.9em;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+.cards li:after,
+.cards li:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.cards li img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  float: left;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+.cards li .details {
+  float: left;
+  text-align: left;
+  transition: all 0.5s ease-in-out;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0);
+  min-width: 250px;
+}
+.cards li .details > span,
+.cards li .details > a {
+  display: block;
+  padding: 0 15px 0 35px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  position: relative;
+}
+.cards li .details > span:before,
+.cards li .details > a:before {
+  display: inline-block;
+  font: normal normal normal 13px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 15px;
+  width: 15px;
+  text-align: center;
+  color: #444;
+}
+.cards li .details a {
+  color: #57893c;
+  transition: color 0.5s ease-in-out;
+}
+.cards li .details a:hover,
+.cards li .details a:focus {
+  color: #97c77e;
+  transition: color 0.5s ease-in-out;
+}
+.cards li .details .name {
+  font-weight: 600;
+}
+.cards li .details .name:before {
+  content: "\f2c0";
+}
+.cards li .details .title:before {
+  content: "\f2c1";
+}
+.cards li .details .phone:before {
+  content: "\f095";
+}
+.cards li .details .email:before {
+  content: "\f003";
+}
+.cards li:hover {
+  background: rgba(235, 237, 189, 0.5);
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+.cards li:hover img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s ease-in-out;
+}
+.cards li:hover .details {
+  transition: all 0.5s ease-in-out;
+  text-shadow: 1px 1px #dfe295;
+}
+@media (max-width: 550px) {
+  .cards li {
+    display: block;
+    width: auto;
+    max-width: 200px;
+    margin: 30px auto;
+  }
+  .cards li img,
+  .cards li .details {
+    float: none;
+  }
+  .cards li img {
+    margin: 0 auto;
+  }
+  .cards li .details {
+    margin-top: 20px;
+    text-align: center;
+    min-width: 0;
+  }
+  .cards li .details span,
+  .cards li .details a {
+    padding: 0;
+    white-space: break-all;
+    word-wrap: break-word;
+  }
+  .cards li .details span:before,
+  .cards li .details a:before {
+    display: none;
+  }
+}
